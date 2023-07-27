@@ -1,0 +1,352 @@
+2-6
+                    3D
+ Schrodinger Suite 2022-2.
+ 52 56  0  0  1  0            999 V2000
+  -31.3043  -24.0559  -23.5658 O   0  0  0  0  0  0
+  -31.1290  -22.9880  -22.9831 C   0  0  0  0  0  0
+  -31.2805  -22.7819  -21.4722 C   0  0  2  0  0  0
+  -30.9251  -24.0484  -20.6658 C   0  0  0  0  0  0
+  -32.6979  -22.1841  -21.0983 C   0  0  2  0  0  0
+  -33.8173  -23.0661  -21.4792 N   0  3  0  0  0  0
+  -32.9225  -20.7728  -21.6713 C   0  0  0  0  0  0
+  -31.9579  -20.1225  -22.3548 C   0  0  0  0  0  0
+  -30.6123  -20.8044  -22.5521 C   0  0  2  0  0  0
+  -30.7620  -21.8265  -23.5296 O   0  0  0  0  0  0
+  -30.2921  -21.6171  -21.2899 C   0  0  2  0  0  0
+  -28.7466  -21.7932  -21.2247 C   0  0  2  0  0  0
+  -28.1862  -21.5502  -19.7935 C   0  0  0  0  0  0
+  -28.3689  -20.1669  -19.3023 N   0  3  0  0  0  0
+  -28.1730  -20.8670  -22.3412 C   0  0  2  0  0  0
+  -29.3600  -19.9347  -22.7180 C   0  0  1  0  0  0
+  -29.1828  -19.1467  -24.0408 C   0  0  0  0  0  0
+  -28.2249  -19.7847  -25.0715 C   0  0  0  0  0  0
+  -27.0769  -20.5975  -24.4313 C   0  0  1  0  0  0
+  -27.6929  -21.6839  -23.5654 C   0  0  0  0  0  0
+  -26.2652  -21.1494  -25.4447 O   0  0  0  0  0  0
+  -26.2752  -19.8180  -23.4079 C   0  0  0  0  0  0
+  -26.9091  -20.0204  -22.0487 C   0  0  0  0  0  0
+  -25.1015  -19.2014  -23.6134 C   0  0  0  0  0  0
+  -30.7709  -23.8154  -19.6134 H   0  0  0  0  0  0
+  -30.0141  -24.5218  -21.0299 H   0  0  0  0  0  0
+  -31.7169  -24.7961  -20.7201 H   0  0  0  0  0  0
+  -32.7625  -22.0779  -20.0141 H   0  0  0  0  0  0
+  -34.6857  -22.6408  -21.1846 H   0  0  0  0  0  0
+  -33.7151  -23.9531  -21.0051 H   0  0  0  0  0  0
+  -33.8744  -20.2947  -21.4854 H   0  0  0  0  0  0
+  -32.1027  -19.1233  -22.7409 H   0  0  0  0  0  0
+  -30.5779  -21.0529  -20.4134 H   0  0  0  0  0  0
+  -28.5004  -22.8232  -21.4802 H   0  0  0  0  0  0
+  -28.6756  -22.2224  -19.0870 H   0  0  0  0  0  0
+  -27.1247  -21.7941  -19.7575 H   0  0  0  0  0  0
+  -27.8985  -20.0275  -18.4170 H   0  0  0  0  0  0
+  -29.3707  -19.9815  -19.1403 H   0  0  0  0  0  0
+  -29.4425  -19.1775  -21.9349 H   0  0  0  0  0  0
+  -30.1486  -18.9285  -24.4971 H   0  0  0  0  0  0
+  -28.7689  -18.1715  -23.7843 H   0  0  0  0  0  0
+  -28.8007  -20.4393  -25.7264 H   0  0  0  0  0  0
+  -27.8193  -18.9995  -25.7122 H   0  0  0  0  0  0
+  -26.9298  -22.4026  -23.2606 H   0  0  0  0  0  0
+  -28.4605  -22.2460  -24.0903 H   0  0  0  0  0  0
+  -25.8045  -20.4320  -25.8598 H   0  0  0  0  0  0
+  -27.1210  -19.0629  -21.5728 H   0  0  0  0  0  0
+  -26.1895  -20.5595  -21.4330 H   0  0  0  0  0  0
+  -24.6568  -19.1476  -24.5961 H   0  0  0  0  0  0
+  -24.5733  -18.7219  -22.8026 H   0  0  0  0  0  0
+  -28.0190  -19.4901  -19.9633 H   0  0  0  0  0  0
+  -33.8312  -23.2083  -22.4786 H   0  0  0  0  0  0
+  1  2  2  0  0  0
+  2 10  1  0  0  0
+  2  3  1  0  0  0
+  3 11  1  0  0  0
+  3  4  1  0  0  0
+  3  5  1  0  0  0
+  4 25  1  0  0  0
+  4 26  1  0  0  0
+  4 27  1  0  0  0
+  5  6  1  0  0  0
+  5  7  1  0  0  0
+  5 28  1  0  0  0
+  6 29  1  0  0  0
+  6 30  1  0  0  0
+  6 52  1  0  0  0
+  7  8  2  0  0  0
+  7 31  1  0  0  0
+  8  9  1  0  0  0
+  8 32  1  0  0  0
+  9 16  1  0  0  0
+  9 10  1  0  0  0
+  9 11  1  0  0  0
+ 11 12  1  0  0  0
+ 11 33  1  0  0  0
+ 12 13  1  0  0  0
+ 12 15  1  0  0  0
+ 12 34  1  0  0  0
+ 13 14  1  0  0  0
+ 13 35  1  0  0  0
+ 13 36  1  0  0  0
+ 14 37  1  0  0  0
+ 14 38  1  0  0  0
+ 14 51  1  0  0  0
+ 15 23  1  0  0  0
+ 15 20  1  0  0  0
+ 15 16  1  0  0  0
+ 16 17  1  0  0  0
+ 16 39  1  0  0  0
+ 17 18  1  0  0  0
+ 17 40  1  0  0  0
+ 17 41  1  0  0  0
+ 18 19  1  0  0  0
+ 18 42  1  0  0  0
+ 18 43  1  0  0  0
+ 19 20  1  0  0  0
+ 19 21  1  0  0  0
+ 19 22  1  0  0  0
+ 20 44  1  0  0  0
+ 20 45  1  0  0  0
+ 21 46  1  0  0  0
+ 22 23  1  0  0  0
+ 22 24  2  0  0  0
+ 23 47  1  0  0  0
+ 23 48  1  0  0  0
+ 24 49  1  0  0  0
+ 24 50  1  0  0  0
+M  CHG  2   6   1  14   1
+M  END
+> <s_m_entry_id>
+21870
+
+> <s_m_entry_name>
+data_maestro.93
+
+> <s_m_Source_Path>
+C:\Users\olshana1\Documents\new-progect-about-gram-negative-bacteria-main\work with NATURE dataset - neutral molecules\Gram Negative Permeation - OmpF- applying for Nature_data_neutral_charge
+
+> <s_m_Source_File>
+data_maestro.csv
+
+> <i_m_Source_File_Index>
+93
+
+> <s_m_job_name>
+glide-dock_nature_neutral_ph7.4
+
+> <s_i_glide_gridfile>
+3POX-grid
+
+> <i_i_glide_lignum>
+95
+
+> <i_i_glide_rotatable_bonds>
+2
+
+> <r_i_docking_score>
+-6.26785909188475
+
+> <r_i_glide_ligand_efficiency>
+-0.261160795495198
+
+> <r_i_glide_ligand_efficiency_sa>
+-0.753318089370152
+
+> <r_i_glide_ligand_efficiency_ln>
+-1.50018629400061
+
+> <r_i_glide_gscore>
+-6.36575909188475
+
+> <r_i_glide_lipo>
+0
+
+> <r_i_glide_hbond>
+-0.324375137957295
+
+> <r_i_glide_metal>
+0
+
+> <r_i_glide_rewards>
+-1.1424735
+
+> <r_i_glide_evdw>
+-20.2449493408203
+
+> <r_i_glide_ecoul>
+-24.6753158569336
+
+> <r_i_glide_erotb>
+0
+
+> <r_i_glide_esite>
+-0.185365608346405
+
+> <r_i_glide_emodel>
+-74.2150535762964
+
+> <r_i_glide_energy>
+-44.9202651977539
+
+> <r_i_glide_einternal>
+2.66987061500549
+
+> <i_i_glide_confnum>
+1
+
+> <i_i_glide_posenum>
+259
+
+> <r_i_glide_eff_state_penalty>
+0.0979
+
+> <r_glide_res:A132_vdw>
+-1.08852293757913
+
+> <r_glide_res:A132_coul>
+44.007318660638
+
+> <r_glide_res:A132_hbond>
+0
+
+> <r_glide_res:A132_dist>
+2.20144914996351
+
+> <r_glide_res:A132_Eint>
+42.9187957230589
+
+> <r_glide_res:A117_vdw>
+-3.93384896862128
+
+> <r_glide_res:A117_coul>
+-42.4823898521913
+
+> <r_glide_res:A117_hbond>
+0
+
+> <r_glide_res:A117_dist>
+2.40391899386226
+
+> <r_glide_res:A117_Eint>
+-46.4162388208126
+
+> <r_glide_res:A113_vdw>
+-0.454820800803239
+
+> <r_glide_res:A113_coul>
+-101.583728311639
+
+> <r_glide_res:A113_hbond>
+-0.197386265038119
+
+> <r_glide_res:A113_dist>
+1.59477253007624
+
+> <r_glide_res:A113_Eint>
+-102.23593537748
+
+> <r_glide_res:A82_vdw>
+-1.39381424733656
+
+> <r_glide_res:A82_coul>
+36.9789251739292
+
+> <r_glide_res:A82_hbond>
+-0.0126645225349182
+
+> <r_glide_res:A82_dist>
+2.43407556871444
+
+> <r_glide_res:A82_Eint>
+35.5724464040578
+
+> <r_glide_res:A42_vdw>
+-0.418361293736353
+
+> <r_glide_res:A42_coul>
+27.8269437698474
+
+> <r_glide_res:A42_hbond>
+-0.114324350384257
+
+> <r_glide_res:A42_dist>
+2.07199657640901
+
+> <r_glide_res:A42_Eint>
+27.2942581257268
+
+> <r_glide_res:A16_vdw>
+-0.477487091601438
+
+> <r_glide_res:A16_coul>
+33.4639747942827
+
+> <r_glide_res:A16_hbond>
+0
+
+> <r_glide_res:A16_dist>
+2.91095694212321
+
+> <r_glide_res:A16_Eint>
+32.9864877026813
+
+> <s_m_source_file>
+ligprep_data_Nature_from3Dstructure_NEUTRAL-out1_without_tautomers-out1_5.maegz
+
+> <i_m_source_file_index>
+93
+
+> <i_lp_mmshare_version>
+58128
+
+> <i_f3d_flags>
+0
+
+> <s_lp_Force_Field>
+S-OPLS
+
+> <r_lp_Energy>
+59.96256
+
+> <b_lp_Chiralities_Consistent>
+1
+
+> <s_lp_Variant>
+2-6-1
+
+> <s_epik_input>
+W0NIXTE9W0NIXVtDQEBIXShbTkgyXSlbQ0BdKEMoPU8pTzIpKFtDSDNdKVtDQEhdKFtDQF0xMjMpW0NASF0oW0NIMl1bTkgyXSlbQ0BdNDVbQ0BIXTNbQ0gyXVtDSDJdW0NAQF0oW0NIMl00KShbT0hdKUMoW0NIMl01KT1bQ0gyXQ==
+
+> <s_epik_cmdline>
+J2VwaWtfcHl0aG9uJywgJy1waHQnLCAnMC4wJywgJy1waCcsICc3LjQnLCAnLW50JywgJy1tYScsICc1MDAnLCAnLWltYWUnLCAnPGluZmlsZS5tYWU+JywgJy1vbWFlJywgJzxvdXRmaWxlLm1hZT4n
+
+> <r_epik_Ionization_Penalty>
+  0.1009
+
+> <r_epik_Ionization_Penalty_Charging>
+  0.1009
+
+> <r_epik_Ionization_Penalty_Neutral>
+  0.0000
+
+> <r_epik_State_Penalty>
+  0.0979
+
+> <r_epik_Charging_Adjusted_Penalty>
+0.198718968584925
+
+> <i_epik_Tot_Q>
+2
+
+> <i_epik_Tot_abs_Q>
+2
+
+> <s_epik_Chemistry_Notes>
+This compound has an ester and may undergo hydrolysis at high or low pH.
+
+> <s_m_subgroup_title>
+glide-dock_nature_neutral_ph7.4_pv1
+
+> <s_m_subgroupid>
+glide-dock_nature_neutral_ph7.4_pv1
+
+> <b_m_subgroup_collapsed>
+0
+
+$$$$

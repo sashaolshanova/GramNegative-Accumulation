@@ -1,0 +1,351 @@
+4-33
+                    3D
+ Schrodinger Suite 2022-2.
+ 50 54  0  0  1  0            999 V2000
+  -29.2077  -21.5495  -26.4782 O   0  0  0  0  0  0
+  -29.3503  -21.9067  -25.3121 C   0  0  0  0  0  0
+  -30.7159  -22.2854  -24.7397 C   0  0  2  0  0  0
+  -31.7751  -21.9654  -25.6482 O   0  0  0  0  0  0
+  -32.1396  -20.5937  -25.7809 C   0  0  0  0  0  0
+  -30.8672  -21.6921  -23.3338 C   0  0  0  0  0  0
+  -29.6737  -22.0509  -22.4162 C   0  0  1  0  0  0
+  -28.2729  -21.6679  -22.9711 C   0  0  2  0  0  0
+  -27.1910  -22.3105  -22.0816 C   0  0  0  0  0  0
+  -25.8861  -22.5886  -22.5530 C   0  0  0  0  0  0
+  -25.3554  -22.3836  -23.7895 O   0  0  0  0  0  0
+  -24.0113  -22.7709  -23.7152 C   0  0  0  0  0  0
+  -23.7630  -23.3074  -22.4453 O   0  0  0  0  0  0
+  -24.9133  -23.1424  -21.7432 C   0  0  0  0  0  0
+  -25.1574  -23.4508  -20.3985 C   0  0  0  0  0  0
+  -26.4392  -23.1694  -19.8881 C   0  0  0  0  0  0
+  -27.4526  -22.6072  -20.7091 C   0  0  0  0  0  0
+  -28.8076  -22.3159  -20.0647 C   0  0  2  0  0  0
+  -29.4258  -23.5496  -19.6136 N   0  0  0  0  0  0
+  -29.8016  -21.5286  -20.9720 C   0  0  1  0  0  0
+  -29.5672  -20.0510  -20.8711 N   0  3  2  0  0  0
+  -30.7138  -19.1647  -21.2133 C   0  0  0  0  0  0
+  -28.2984  -19.5767  -21.4725 C   0  0  0  0  0  0
+  -28.1174  -20.1248  -22.9043 C   0  0  0  0  0  0
+  -28.1396  -22.1772  -24.4282 C   0  0  0  0  0  0
+  -30.7138  -23.3724  -24.6505 H   0  0  0  0  0  0
+  -32.8426  -20.4865  -26.6068 H   0  0  0  0  0  0
+  -31.2846  -19.9477  -25.9861 H   0  0  0  0  0  0
+  -32.6443  -20.2291  -24.8855 H   0  0  0  0  0  0
+  -30.9550  -20.6197  -23.4320 H   0  0  0  0  0  0
+  -31.7998  -22.0409  -22.8884 H   0  0  0  0  0  0
+  -29.7065  -23.1388  -22.3586 H   0  0  0  0  0  0
+  -23.8041  -23.5209  -24.4783 H   0  0  0  0  0  0
+  -23.3712  -21.9024  -23.8795 H   0  0  0  0  0  0
+  -24.3808  -23.8644  -19.7706 H   0  0  0  0  0  0
+  -26.6460  -23.3725  -18.8459 H   0  0  0  0  0  0
+  -28.6357  -21.7249  -19.1629 H   0  0  0  0  0  0
+  -29.0179  -23.7696  -18.7128 H   0  0  0  0  0  0
+  -30.3738  -23.2827  -19.3448 H   0  0  0  0  0  0
+  -30.8123  -21.7080  -20.6008 H   0  0  0  0  0  0
+  -30.8127  -18.9437  -22.2701 H   0  0  0  0  0  0
+  -30.5647  -18.2031  -20.7211 H   0  0  0  0  0  0
+  -31.6502  -19.5635  -20.8169 H   0  0  0  0  0  0
+  -28.2913  -18.4859  -21.4701 H   0  0  0  0  0  0
+  -27.4621  -19.8705  -20.8360 H   0  0  0  0  0  0
+  -27.1340  -19.8305  -23.2739 H   0  0  0  0  0  0
+  -28.8318  -19.6352  -23.5668 H   0  0  0  0  0  0
+  -27.9814  -23.2555  -24.4201 H   0  0  0  0  0  0
+  -27.2745  -21.7192  -24.9069 H   0  0  0  0  0  0
+  -29.5241  -19.8983  -19.8647 H   0  0  0  0  0  0
+  1  2  2  0  0  0
+  2 25  1  0  0  0
+  2  3  1  0  0  0
+  3  4  1  0  0  0
+  3  6  1  0  0  0
+  3 26  1  0  0  0
+  4  5  1  0  0  0
+  5 27  1  0  0  0
+  5 28  1  0  0  0
+  5 29  1  0  0  0
+  6  7  1  0  0  0
+  6 30  1  0  0  0
+  6 31  1  0  0  0
+  7 20  1  0  0  0
+  7  8  1  0  0  0
+  7 32  1  0  0  0
+  8 24  1  0  0  0
+  8  9  1  0  0  0
+  8 25  1  0  0  0
+  9 17  2  0  0  0
+  9 10  1  0  0  0
+ 10 11  1  0  0  0
+ 10 14  2  0  0  0
+ 11 12  1  0  0  0
+ 12 13  1  0  0  0
+ 12 33  1  0  0  0
+ 12 34  1  0  0  0
+ 13 14  1  0  0  0
+ 14 15  1  0  0  0
+ 15 16  2  0  0  0
+ 15 35  1  0  0  0
+ 16 17  1  0  0  0
+ 16 36  1  0  0  0
+ 17 18  1  0  0  0
+ 18 19  1  0  0  0
+ 18 20  1  0  0  0
+ 18 37  1  0  0  0
+ 19 38  1  0  0  0
+ 19 39  1  0  0  0
+ 20 21  1  0  0  0
+ 20 40  1  0  0  0
+ 21 22  1  0  0  0
+ 21 23  1  0  0  0
+ 21 50  1  0  0  0
+ 22 41  1  0  0  0
+ 22 42  1  0  0  0
+ 22 43  1  0  0  0
+ 23 24  1  0  0  0
+ 23 44  1  0  0  0
+ 23 45  1  0  0  0
+ 24 46  1  0  0  0
+ 24 47  1  0  0  0
+ 25 48  1  0  0  0
+ 25 49  1  0  0  0
+M  CHG  1  21   1
+M  END
+> <s_m_entry_id>
+22039
+
+> <s_m_entry_name>
+data_maestro.23
+
+> <s_m_Source_Path>
+C:\Users\olshana1\Documents\new-progect-about-gram-negative-bacteria-main\work with NATURE dataset - neutral molecules\Gram Negative Permeation - OmpF- applying for Nature_data_neutral_charge
+
+> <s_m_Source_File>
+data_maestro.csv
+
+> <i_m_Source_File_Index>
+23
+
+> <s_m_job_name>
+glide-dock_nature_neutral_ph7.4
+
+> <s_i_glide_gridfile>
+3POX-grid
+
+> <i_i_glide_lignum>
+24
+
+> <i_i_glide_rotatable_bonds>
+1
+
+> <r_i_docking_score>
+-5.10915971853218
+
+> <r_i_glide_ligand_efficiency>
+-0.204366388741287
+
+> <r_i_glide_ligand_efficiency_sa>
+-0.597570945132861
+
+> <r_i_glide_ligand_efficiency_ln>
+-1.21102396245374
+
+> <r_i_glide_gscore>
+-5.37305971853218
+
+> <r_i_glide_lipo>
+0
+
+> <r_i_glide_hbond>
+-0.470932412772015
+
+> <r_i_glide_metal>
+0
+
+> <r_i_glide_rewards>
+-1.27900363636364
+
+> <r_i_glide_evdw>
+-14.2926025390625
+
+> <r_i_glide_ecoul>
+-17.7502670288086
+
+> <r_i_glide_erotb>
+0
+
+> <r_i_glide_esite>
+-0.245953488122117
+
+> <r_i_glide_emodel>
+-47.1012311795739
+
+> <r_i_glide_energy>
+-32.0428695678711
+
+> <r_i_glide_einternal>
+4.05435752868652
+
+> <i_i_glide_confnum>
+1
+
+> <i_i_glide_posenum>
+172
+
+> <r_i_glide_eff_state_penalty>
+0.2639
+
+> <r_glide_res:A132_vdw>
+-2.1641424307129
+
+> <r_glide_res:A132_coul>
+16.5401702614236
+
+> <r_glide_res:A132_hbond>
+0
+
+> <r_glide_res:A132_dist>
+2.46120315614552
+
+> <r_glide_res:A132_Eint>
+14.3760278307107
+
+> <r_glide_res:A117_vdw>
+-1.69081692878591
+
+> <r_glide_res:A117_coul>
+-25.0245681081795
+
+> <r_glide_res:A117_hbond>
+0
+
+> <r_glide_res:A117_dist>
+2.29305916883503
+
+> <r_glide_res:A117_Eint>
+-26.7153850369654
+
+> <r_glide_res:A113_vdw>
+3.72082175527974
+
+> <r_glide_res:A113_coul>
+-65.059776915056
+
+> <r_glide_res:A113_hbond>
+-0.236990821077163
+
+> <r_glide_res:A113_dist>
+1.82113993814462
+
+> <r_glide_res:A113_Eint>
+-61.5759459808535
+
+> <r_glide_res:A82_vdw>
+-2.31163474048502
+
+> <r_glide_res:A82_coul>
+19.2723618732391
+
+> <r_glide_res:A82_hbond>
+0
+
+> <r_glide_res:A82_dist>
+2.29106146490587
+
+> <r_glide_res:A82_Eint>
+16.9607271327541
+
+> <r_glide_res:A42_vdw>
+-1.3792190061256
+
+> <r_glide_res:A42_coul>
+17.4440538649664
+
+> <r_glide_res:A42_hbond>
+-0.0739415916948516
+
+> <r_glide_res:A42_dist>
+1.84249611002661
+
+> <r_glide_res:A42_Eint>
+15.9908932671459
+
+> <r_glide_res:A16_vdw>
+-1.2102970554577
+
+> <r_glide_res:A16_coul>
+9.93238311025293
+
+> <r_glide_res:A16_hbond>
+-0.16
+
+> <r_glide_res:A16_dist>
+2.00553130163413
+
+> <r_glide_res:A16_Eint>
+8.56208605479523
+
+> <s_m_source_file>
+ligprep_data_Nature_from3Dstructure_NEUTRAL-out1_without_tautomers-out1_5.maegz
+
+> <i_m_source_file_index>
+23
+
+> <i_lp_mmshare_version>
+58128
+
+> <i_f3d_flags>
+0
+
+> <s_lp_Force_Field>
+S-OPLS
+
+> <r_lp_Energy>
+65.774914
+
+> <b_lp_Chiralities_Consistent>
+1
+
+> <s_lp_Variant>
+4-33-1
+
+> <s_epik_input>
+Tz1DKFtDSDJdMSlbQ0BIXShPW0NIM10pW0NIMl1bQ0BASF0oW0NAXTEyMylbQ0BIXShOKFtDSDNdKVtDSDJdW0NIMl0zKVtDQEBIXShbTkgyXSljNGMyYzVjKE9bQ0gyXU81KVtjSF1bY0hdNA==
+
+> <s_epik_cmdline>
+J2VwaWtfcHl0aG9uJywgJy1waHQnLCAnMC4wJywgJy1waCcsICc3LjQnLCAnLW50JywgJy1tYScsICc1MDAnLCAnLWltYWUnLCAnPGluZmlsZS5tYWU+JywgJy1vbWFlJywgJzxvdXRmaWxlLm1hZT4n
+
+> <r_lp_tautomer_probability>
+0.99999998
+
+> <r_epik_Ionization_Penalty>
+  0.1666
+
+> <r_epik_Ionization_Penalty_Charging>
+  0.1575
+
+> <r_epik_Ionization_Penalty_Neutral>
+  0.0091
+
+> <r_epik_State_Penalty>
+  0.2639
+
+> <r_epik_Charging_Adjusted_Penalty>
+0.421424639805897
+
+> <i_epik_Tot_Q>
+1
+
+> <i_epik_Tot_abs_Q>
+1
+
+> <s_epik_Chemistry_Notes>
+This compound contains an acetal/aminal-like group ( X-CH(R)-Y where X, Y are N, S, or O) that may be acid/base labile, releasing an aldehyde.
+
+> <s_m_subgroup_title>
+glide-dock_nature_neutral_ph7.4_pv1
+
+> <s_m_subgroupid>
+glide-dock_nature_neutral_ph7.4_pv1
+
+> <b_m_subgroup_collapsed>
+0
+
+$$$$

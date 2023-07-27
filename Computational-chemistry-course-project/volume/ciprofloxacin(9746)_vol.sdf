@@ -1,0 +1,328 @@
+Ciprofloxacin
+                    3D
+ Schrodinger Suite 2022-2.
+ 42 45  0  0  1  0            999 V2000
+  -31.0497  -22.0827  -22.2220 F   0  0  0  0  0  0
+  -29.7941  -21.6655  -22.5011 C   0  0  0  0  0  0
+  -29.5015  -20.3696  -23.0029 C   0  0  0  0  0  0
+  -30.4961  -19.3827  -23.2168 N   0  0  0  0  0  0
+  -30.2363  -18.0740  -22.6211 C   0  0  0  0  0  0
+  -30.8467  -17.9890  -21.2133 C   0  0  0  0  0  0
+  -32.2791  -18.3493  -21.2134 N   0  3  0  0  0  0
+  -32.5733  -19.6405  -21.8590 C   0  0  0  0  0  0
+  -31.9195  -19.7233  -23.2591 C   0  0  0  0  0  0
+  -28.1486  -20.0727  -23.3273 C   0  0  0  0  0  0
+  -27.1113  -21.0339  -23.1871 C   0  0  0  0  0  0
+  -25.7769  -20.8457  -23.6203 N   0  0  0  0  0  0
+  -25.5245  -19.7151  -24.4991 C   0  0  0  0  0  0
+  -24.8361  -19.9455  -25.8348 C   0  0  0  0  0  0
+  -26.3000  -19.6062  -25.7853 C   0  0  0  0  0  0
+  -24.8405  -21.8745  -23.5514 C   0  0  0  0  0  0
+  -25.0585  -23.1057  -23.0462 C   0  0  0  0  0  0
+  -23.9688  -24.2447  -23.2160 C   0  0  0  0  0  0
+  -24.3686  -25.4314  -23.2140 O   0  5  0  0  0  0
+  -22.7929  -23.8863  -23.4444 O   0  0  0  0  0  0
+  -26.3997  -23.3253  -22.4417 C   0  0  0  0  0  0
+  -26.7006  -24.3495  -21.8465 O   0  0  0  0  0  0
+  -27.4367  -22.2849  -22.6254 C   0  0  0  0  0  0
+  -28.7678  -22.5883  -22.2846 C   0  0  0  0  0  0
+  -29.1706  -17.8604  -22.5558 H   0  0  0  0  0  0
+  -30.6639  -17.3039  -23.2647 H   0  0  0  0  0  0
+  -30.7690  -16.9799  -20.8140 H   0  0  0  0  0  0
+  -30.3022  -18.6435  -20.5319 H   0  0  0  0  0  0
+  -32.7704  -17.6141  -21.7010 H   0  0  0  0  0  0
+  -33.6526  -19.7707  -21.9326 H   0  0  0  0  0  0
+  -32.2156  -20.4177  -21.1859 H   0  0  0  0  0  0
+  -32.4074  -19.0036  -23.9193 H   0  0  0  0  0  0
+  -32.0856  -20.6941  -23.7251 H   0  0  0  0  0  0
+  -27.9144  -19.1014  -23.7361 H   0  0  0  0  0  0
+  -25.3020  -18.8000  -23.9510 H   0  0  0  0  0  0
+  -24.1623  -19.1682  -26.1893 H   0  0  0  0  0  0
+  -24.5818  -20.9567  -26.1448 H   0  0  0  0  0  0
+  -27.0040  -20.4018  -26.0139 H   0  0  0  0  0  0
+  -26.6015  -18.6162  -26.1082 H   0  0  0  0  0  0
+  -23.8932  -21.6293  -24.0106 H   0  0  0  0  0  0
+  -29.0332  -23.5504  -21.8739 H   0  0  0  0  0  0
+  -32.5944  -18.3961  -20.2547 H   0  0  0  0  0  0
+  1  2  1  0  0  0
+  2 24  1  0  0  0
+  2  3  2  0  0  0
+  3  4  1  0  0  0
+  3 10  1  0  0  0
+  4  9  1  0  0  0
+  4  5  1  0  0  0
+  5  6  1  0  0  0
+  5 25  1  0  0  0
+  5 26  1  0  0  0
+  6  7  1  0  0  0
+  6 27  1  0  0  0
+  6 28  1  0  0  0
+  7  8  1  0  0  0
+  7 29  1  0  0  0
+  7 42  1  0  0  0
+  8  9  1  0  0  0
+  8 30  1  0  0  0
+  8 31  1  0  0  0
+  9 32  1  0  0  0
+  9 33  1  0  0  0
+ 10 11  2  0  0  0
+ 10 34  1  0  0  0
+ 11 12  1  0  0  0
+ 11 23  1  0  0  0
+ 12 13  1  0  0  0
+ 12 16  1  0  0  0
+ 13 15  1  0  0  0
+ 13 14  1  0  0  0
+ 13 35  1  0  0  0
+ 14 15  1  0  0  0
+ 14 36  1  0  0  0
+ 14 37  1  0  0  0
+ 15 38  1  0  0  0
+ 15 39  1  0  0  0
+ 16 17  2  0  0  0
+ 16 40  1  0  0  0
+ 17 18  1  0  0  0
+ 17 21  1  0  0  0
+ 18 19  1  0  0  0
+ 18 20  2  0  0  0
+ 21 23  1  0  0  0
+ 21 22  2  0  0  0
+ 23 24  2  0  0  0
+ 24 41  1  0  0  0
+M  CHG  2   7   1  19  -1
+M  END
+> <s_m_entry_id>
+22767
+
+> <s_m_entry_name>
+data_maestro.189
+
+> <s_m_Source_Path>
+C:\Users\olshana1\Documents\new-progect-about-gram-negative-bacteria-main\work with NATURE dataset - neutral molecules\Gram Negative Permeation - OmpF- applying for Nature_data_neutral_charge
+
+> <s_m_Source_File>
+data_maestro.csv
+
+> <i_m_Source_File_Index>
+189
+
+> <s_m_job_name>
+glide-dock_nature_neutral_ph7.4
+
+> <s_i_glide_gridfile>
+3POX-grid
+
+> <i_i_glide_lignum>
+191
+
+> <i_i_glide_rotatable_bonds>
+3
+
+> <r_i_docking_score>
+-4.01237081535485
+
+> <r_i_glide_ligand_efficiency>
+-0.167182117306452
+
+> <r_i_glide_ligand_efficiency_sa>
+-0.482236673185768
+
+> <r_i_glide_ligand_efficiency_ln>
+-0.960344451813993
+
+> <r_i_glide_gscore>
+-4.05867081535485
+
+> <r_i_glide_lipo>
+0
+
+> <r_i_glide_hbond>
+-0.259927278285012
+
+> <r_i_glide_metal>
+0
+
+> <r_i_glide_rewards>
+-1.14994416136364
+
+> <r_i_glide_evdw>
+-15.5999622344971
+
+> <r_i_glide_ecoul>
+-13.2206087112427
+
+> <r_i_glide_erotb>
+0.342845890721476
+
+> <r_i_glide_esite>
+-0.228555848016424
+
+> <r_i_glide_emodel>
+-45.9321836801062
+
+> <r_i_glide_energy>
+-28.8205709457397
+
+> <r_i_glide_einternal>
+6.59164667129517
+
+> <i_i_glide_confnum>
+24
+
+> <i_i_glide_posenum>
+115
+
+> <r_i_glide_eff_state_penalty>
+0.0463
+
+> <r_glide_res:A132_vdw>
+3.59660077333934
+
+> <r_glide_res:A132_coul>
+-23.3505865995105
+
+> <r_glide_res:A132_hbond>
+-0.097330839252562
+
+> <r_glide_res:A132_dist>
+1.82264774332092
+
+> <r_glide_res:A132_Eint>
+-19.8513166654237
+
+> <r_glide_res:A117_vdw>
+-3.86449411805341
+
+> <r_glide_res:A117_coul>
+-4.09557362445869
+
+> <r_glide_res:A117_hbond>
+0
+
+> <r_glide_res:A117_dist>
+2.20583357988179
+
+> <r_glide_res:A117_Eint>
+-7.96006774251211
+
+> <r_glide_res:A113_vdw>
+-3.21851955767186
+
+> <r_glide_res:A113_coul>
+-22.753265130229
+
+> <r_glide_res:A113_hbond>
+0
+
+> <r_glide_res:A113_dist>
+2.32003729341759
+
+> <r_glide_res:A113_Eint>
+-25.9717846879009
+
+> <r_glide_res:A82_vdw>
+-1.47580383253092
+
+> <r_glide_res:A82_coul>
+-20.0936929568056
+
+> <r_glide_res:A82_hbond>
+-0.16259643903245
+
+> <r_glide_res:A82_dist>
+2.07577670153272
+
+> <r_glide_res:A82_Eint>
+-21.732093228369
+
+> <r_glide_res:A42_vdw>
+-1.98293610916001
+
+> <r_glide_res:A42_coul>
+-10.3852926638619
+
+> <r_glide_res:A42_hbond>
+0
+
+> <r_glide_res:A42_dist>
+2.614764635592
+
+> <r_glide_res:A42_Eint>
+-12.3682287730219
+
+> <r_glide_res:A16_vdw>
+-0.321742676913542
+
+> <r_glide_res:A16_coul>
+2.85903615000904
+
+> <r_glide_res:A16_hbond>
+0
+
+> <r_glide_res:A16_dist>
+3.97804705954704
+
+> <r_glide_res:A16_Eint>
+2.5372934730955
+
+> <s_m_source_file>
+ligprep_data_Nature_from3Dstructure_NEUTRAL-out1_without_tautomers-out1_5.maegz
+
+> <i_m_source_file_index>
+189
+
+> <i_lp_mmshare_version>
+58128
+
+> <i_f3d_flags>
+0
+
+> <s_lp_Force_Field>
+S-OPLS
+
+> <r_lp_Energy>
+45.812
+
+> <b_lp_Chiralities_Consistent>
+1
+
+> <s_lp_Variant>
+Ciprofloxacin-1
+
+> <s_epik_input>
+W0NIMl0xW0NIMl1bTkhdW0NIMl1bQ0gyXU4xYyhbY0hdMiljKEYpW2NIXWMoYzIzKWMoPU8pYyhDKD1PKVtPSF0pW2NIXW4zW0NIXTRbQ0gyXVtDSDJdNA==
+
+> <s_epik_cmdline>
+J2VwaWtfcHl0aG9uJywgJy1waHQnLCAnMC4wJywgJy1waCcsICc3LjQnLCAnLW50JywgJy1tYScsICc1MDAnLCAnLWltYWUnLCAnPGluZmlsZS5tYWU+JywgJy1vbWFlJywgJzxvdXRmaWxlLm1hZT4n
+
+> <r_epik_Ionization_Penalty>
+  0.0679
+
+> <r_epik_Ionization_Penalty_Charging>
+  0.0679
+
+> <r_epik_Ionization_Penalty_Neutral>
+  0.0000
+
+> <r_epik_State_Penalty>
+  0.0463
+
+> <r_epik_Charging_Adjusted_Penalty>
+0.114210120500388
+
+> <i_epik_Tot_Q>
+0
+
+> <i_epik_Tot_abs_Q>
+2
+
+> <s_m_subgroup_title>
+glide-dock_nature_neutral_ph7.4_pv1
+
+> <s_m_subgroupid>
+glide-dock_nature_neutral_ph7.4_pv1
+
+> <b_m_subgroup_collapsed>
+0
+
+$$$$
