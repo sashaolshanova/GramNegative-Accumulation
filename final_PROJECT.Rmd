@@ -1,0 +1,484 @@
+---
+title: "Final project, Gram negative bacteria permeation"
+author: "Dina Khasanova and Aleksandra Olshanova"
+date: "2023-06-15"
+output: html_document
+---
+```{r include=FALSE}
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(glue)
+library(corrplot)
+library(Rtsne)
+library(tidymodels)
+library('fastDummies')
+library(randomForest)
+library(caret)
+```
+
+```{r}
+# read and look at data
+data <- read.csv("data_final_project_cleaned.csv")
+data
+```
+
+There might be some columns containig only zeros, so we checked some of them.
+
+```{r}
+# columns names
+head(names(data), 8)
+```
+
+```{r}
+data[, 7:10]
+```
+```{r}
+summary(data[, 7:10])
+```
+
+Let's check our data on Nan values:
+
+```{r}
+anyNA(data)
+```
+
+```{r}
+data[is.na(data)] <- as.integer(0)
+anyNA(data)
+```
+
+```{r}
+list_residues = names(data[, 7:734])
+
+myList_delete <- c()
+myList_save <- c()
+for (name in list_residues) {
+  sum_value = sum(data[name])
+  if (sum_value == 0) {
+    myList_delete <- append(myList_delete, name)
+  }
+  else {
+    myList_save <- append(myList_save, name)
+  }
+}
+
+df = data[,!(names(data) %in% myList_delete)]
+
+print('Number of features to save')
+print(length(myList_save))
+print('Number of features to delete')
+print(length(myList_delete))
+df
+```
+
+```{r}
+asp113 <- c("A.113.ASP..HDonor.nc", "A.113.ASP..HDonor.cn" , "A.113.ASP..HDonor.nn", "A.113.ASP..HDonor.cc", "A.113.ASP..Salt", "A.113.ASP..HPhob" )
+glu117 <- c("A.117.GLU..HDonor.nc", "A.117.GLU..HDonor.cn", "A.117.GLU..HDonor.nn", "A.117.GLU..HDonor.cc", "A.117.GLU..Salt", "A.117.GLU..HPhob")
+arg132 <-  c("A.132.ARG..HAccep.nn", "A.132.ARG..HAccep.cn", "A.132.ARG..HAccep.cc", "A.132.ARG..HAccep.nc","A.132.ARG..XBond","A.132.ARG..Salt", "A.132.ARG..PiCat" )
+arg82 <-  c("A.82.ARG..HAccep.nn", "A.82.ARG..HAccep.cn", "A.82.ARG..HAccep.cc", "A.82.ARG..HAccep.nc", "A.82.ARG..XBond","A.82.ARG..Salt","A.82.ARG..PiCat")
+agr42 <-  c("A.42.ARG..HAccep.nn", "A.42.ARG..HAccep.cn", "A.42.ARG..HAccep.cc", "A.42.ARG..HAccep.nc","A.42.ARG..XBond","A.42.ARG..Salt","A.42.ARG..PiCat", "A.42.ARG..HPhob")
+lys16 <-  c("A.16.LYS..HAccep.cn", "A.16.LYS..HAccep.cc", "A.16.LYS..XBond", "A.16.LYS..Salt", "A.16.LYS..PiCat", "A.16.LYS..HPhob","A.167.ARG..Salt")
+
+list_important_res <-list(list1 = asp113, list2 = glu117, list3 = arg132 , list4= arg82 , list5 = lys16)
+```
+
+
+
+
+```{r}
+names(df)
+```
+
+```{r}
+threshold_list <- c(1, 1.5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+empty_dict <- list()
+
+real_data = data.frame(matrix(ncol = 190, nrow = 0))
+colnames(real_data) <- c(names(df))
+
+for (number in threshold_list) {
+  
+  empty_dict[[paste0("df_threshold_", number)]] <- real_data  
+  
+  for (name in unique(df$name)) {
+    #print(name)
+    
+    small_data = df[df['name'] == name ,]
+    #print(dim(small_data))
+    
+    threshold = dim(small_data)[1]/number
+    #print(threshold)
+    
+    list_values_row <- c(small_data[1,][, 0:6])
+    #print(list_values_row)
+    
+    for (residue in myList_save) {
+    sum_value = sum(small_data[residue])
+    
+    if (sum_value >= threshold) {
+      list_values_row<-append(list_values_row, as.integer(1))
+    } else {
+      list_values_row<- append(list_values_row, as.integer(0))
+    }
+      
+    }
+    
+    empty_dict[[paste0("df_threshold_", number)]][nrow(empty_dict[[paste0("df_threshold_", number)]]) + 1,] <- list_values_row
+  }
+  
+    for (column_p in list_important_res) {
+      new_col <- c()
+    
+      for (index in rownames(empty_dict[[paste0("df_threshold_", number)]])) {
+        sum_res = sum(empty_dict[[paste0("df_threshold_", number)]][index, column_p])
+        
+        if (sum_res > 0) {
+          new_col<-append(new_col, as.integer(1))
+        } else {
+          new_col<- append(new_col, as.integer(0))
+        }
+      }
+      
+      name_Y =paste0("residue", strsplit(column_p[1], split = '[.]')[[1]])
+      empty_dict[[paste0("df_threshold_", number)]][name_Y[2]] <- new_col
+      
+    }
+}
+
+```
+
+```{r}
+names(empty_dict$df_threshold_2)
+```
+
+```{r fig.height = 4, fig.width = 6.5}
+for (number in threshold_list) {
+p2 <- ggplot(empty_dict[[paste0("df_threshold_", number)]], aes(x=Charge, y=Permeability.coefficient, fill=as.character(residue117))) + 
+    geom_boxplot() +
+    facet_wrap(~Charge, scale="free") +
+    labs(x = "Charge + GLU117", y = "Permeability.coefficient", title = number)
+print(p2)
+}
+```
+
+
+```{r fig.height = 3, fig.width = 3}
+for (number in threshold_list) {
+ plot <- ggplot(empty_dict[[paste0("df_threshold_", number)]], aes(x = as.character(residue113) , y = Permeability.coefficient)) +
+  geom_boxplot(fill = "skyblue", color = "black") +
+  labs(x = "ASP113", y = "Permeability.coefficient", title = number)
+  print(plot)
+}
+```
+
+
+```{r}
+ggplot(empty_dict$df_threshold_3, aes(x = Charge , y = Permeability.coefficient)) +
+  geom_boxplot(fill = "skyblue", color = "black") +
+  labs(x = "Charge", y = "Permeability.coefficient", title = number)
+```
+
+
+```{r}
+ggplot(empty_dict$df_threshold_3, aes(fill=as.character(residue113), x= as.character(residue113), y=Permeability.coefficient)) +
+    geom_boxplot(notch = TRUE) + 
+    geom_jitter(position = position_jitter(width = .05, height =0), shape=21, size=1.5) +
+    scale_fill_hue(l=40) 
+```
+```{r}
+names(empty_dict$df_threshold_2)
+```
+
+
+```{r}
+for (number in threshold_list) {
+  number_interaction <- c()
+  for (index in rownames(empty_dict[[paste0("df_threshold_", number)]])) {
+        sum_res = sum(empty_dict[[paste0("df_threshold_", number)]][index, 9:(dim(empty_dict[[paste0("df_threshold_", number)]])[2] - 5 )])
+        number_interaction  <- append(number_interaction, sum_res)
+  }
+  empty_dict[[paste0("df_threshold_", number)]]['all_interactions'] <- number_interaction
+}
+empty_dict
+```
+```{r}
+for (number in threshold_list) {
+plot = ggplot(empty_dict[[paste0("df_threshold_", number)]], aes(x = Permeability.coefficient, y = all_interactions, label = empty_dict[[paste0("df_threshold_", number)]]$Accumulation_class, col = empty_dict[[paste0("df_threshold_", number)]]$Accumulation_class)) +
+  geom_point() +
+  ggrepel::geom_text_repel(cex = 2.5) +
+  labs(x = "Permeability.coefficient", y = "All_interactions", title = number)
+print(plot)
+}
+```
+
+```{r}
+list_pp  <- c("residue113","residue117", "residue132", "residue82", "residue16")
+for (number in threshold_list) {
+  number_interaction <- c()
+  for (index in rownames(empty_dict[[paste0("df_threshold_", number)]])) {
+        sum_res = sum(empty_dict[[paste0("df_threshold_", number)]][index, list_pp])
+        number_interaction  <- append(number_interaction, sum_res)
+  }
+  empty_dict[[paste0("df_threshold_", number)]]['all_important_residues'] <- number_interaction
+}
+empty_dict
+```
+
+```{r}
+for (number in threshold_list) {
+plot = ggplot(empty_dict[[paste0("df_threshold_", number)]], aes(x = Permeability.coefficient, y = all_important_residues, label = empty_dict[[paste0("df_threshold_", number)]]$Accumulation_class, col = empty_dict[[paste0("df_threshold_", number)]]$Accumulation_class)) +
+  geom_point() +
+  ggrepel::geom_text_repel(cex = 2.5) +
+  labs(x = "Permeability.coefficient", y = "All important residues", title = number)
+print(plot)
+}
+```
+```{r}
+for (number in threshold_list) {
+  number_interaction <- c()
+  for (index in rownames(empty_dict[[paste0("df_threshold_", number)]])) {
+        sum_res = sum(empty_dict[[paste0("df_threshold_", number)]][index, asp113])
+        number_interaction  <- append(number_interaction, sum_res)
+  }
+  empty_dict[[paste0("df_threshold_", number)]]['ASP113_types_int'] <- number_interaction
+}
+empty_dict
+```
+
+```{r}
+for (number in threshold_list) {
+plot = ggplot(empty_dict[[paste0("df_threshold_", number)]], aes(x = Permeability.coefficient, y = ASP113_types_int, label = empty_dict[[paste0("df_threshold_", number)]]$Accumulation_class, col = empty_dict[[paste0("df_threshold_", number)]]$Accumulation_class)) +
+  geom_point() +
+  ggrepel::geom_text_repel(cex = 2.5) +
+  labs(x = "Accumulation_class", y = "All_interactions", title = number)
+print(plot)
+}
+```
+
+```{r}
+for (number in threshold_list) {
+  list_residues = names(empty_dict[[paste0("df_threshold_", number)]][, 7:190])
+  
+  myList_delete <- c()
+  myList_save <- c()
+  
+  for (name in list_residues) {
+    sum_value = sum(empty_dict[[paste0("df_threshold_", number)]][name])
+    if (sum_value == 0) {
+      myList_delete <- append(myList_delete, name)
+    }
+    else {
+      myList_save <- append(myList_save, name)
+    }
+  }
+  
+  empty_dict[[paste0("df_threshold_", number)]] = empty_dict[[paste0("df_threshold_", number)]][,!(names(empty_dict[[paste0("df_threshold_", number)]]) %in% myList_delete)]
+  
+  print(number)
+  print('Number of features to save')
+  print(length(myList_save))
+  print('Number of features to delete')
+  print(length(myList_delete))
+}  
+```
+
+
+```{r}
+print(dim(empty_dict$df_threshold_2))
+#names(empty_dict$df_threshold_2[5, 7:(dim(empty_dict$df_threshold_2)[2]-5)])
+names(empty_dict$df_threshold_2)
+```
+
+```{r fig.height = 3, fig.width = 3}
+for (number in threshold_list) {
+ plot <- ggplot(empty_dict[[paste0("df_threshold_", number)]], aes(x = Accumulation_class , y = all_important_residues)) +
+  geom_boxplot(fill = "skyblue", color = "black") +
+  labs(x = "Accumulation_class", y = "All_interactions", title = number)
+  print(plot)
+}
+```
+
+
+```{r fig.height = 15, fig.width = 11}
+mydata.cor = cor(empty_dict$df_threshold_3[, 7:dim(empty_dict$df_threshold_3)[2]])
+corrplot(mydata.cor)
+```
+
+```{r}
+delete_list <- c("Charge", "residue113", "residue117", "residue132", "residue82", "residue16")
+for (number in threshold_list) {
+  
+  empty_dict[[paste0("df_threshold_", number)]] <- fastDummies::dummy_cols(empty_dict[[paste0("df_threshold_", number)]], select_columns = "Charge")
+  
+  empty_dict[[paste0("df_threshold_", number)]] = empty_dict[[paste0("df_threshold_", number)]][,!(names(empty_dict[[paste0("df_threshold_", number)]]) %in% delete_list)]
+}
+```
+
+PCA
+
+```{r fig.height = 3, fig.width = 5}
+to_remove <- c("all_interactions", "all_important_residues", "ASP113_types_int")
+
+# Preform PCA on our data
+for (number in threshold_list) {
+empty_dict[[paste0("df_threshold_", number)]] = empty_dict[[paste0("df_threshold_", number)]][ , !(names(empty_dict[[paste0("df_threshold_", number)]]) %in% to_remove)]
+prcomp_df_threshold_3 <- prcomp(empty_dict[[paste0("df_threshold_", number)]][, 6: dim(empty_dict[[paste0("df_threshold_", number)]])[2]])
+pca_df_threshold_3 <- data.frame(
+  PC1 = prcomp_df_threshold_3$x[, 1],
+  PC2 = prcomp_df_threshold_3$x[, 2],
+  classification = empty_dict[[paste0("df_threshold_", number)]]$Accumulation_class,
+  label = empty_dict[[paste0("df_threshold_", number)]]$Accumulation_class
+)
+
+plot = ggplot(pca_df_threshold_3, aes(x = PC1, y = PC2, label = label, col = classification)) +
+  geom_point() +
+  ggrepel::geom_text_repel(cex = 2.5)+
+  labs(x = "PC1", y = "PC2", title = number)
+print(plot)
+}
+```
+
+```{r}
+# Preform TSNE on our data
+
+rtsne_chololate_num <- Rtsne(empty_dict$df_threshold_3[, 6: dim(empty_dict$df_threshold_3)[2]],
+  pca = FALSE, perplexity = 10,
+  theta = 0.0, check_duplicates = FALSE
+)
+
+tsne_chololate_num <- data.frame(
+  TSNE1 = rtsne_chololate_num$Y[, 1],
+  TSNE2 = rtsne_chololate_num$Y[, 2],
+  classification = empty_dict$df_threshold_3$Accumulation_class,
+  label = empty_dict$df_threshold_3$Accumulation_class
+)
+
+ggplot(tsne_chololate_num, aes(
+  x = TSNE1, y = TSNE2,
+  label = label, col = classification
+)) +
+  geom_point() +
+  ggrepel::geom_text_repel(cex = 2.5)
+```
+## Data Splitting
+
+```{r}
+empty_dict$df_threshold_3
+```
+```{r}
+names(empty_dict$df_threshold_3)
+```
+
+```{r}
+for (number in threshold_list) {
+  high_low <- c()
+  for (index in rownames(empty_dict[[paste0("df_threshold_", number)]])) {
+        high_low_value = empty_dict[[paste0("df_threshold_", number)]][index, "Accumulation_class"]
+        
+        if(high_low_value == 'High') {
+          high_low = append(high_low, as.character(1))
+        } else {
+          high_low = append(high_low, as.character(0))
+        }
+  }
+  empty_dict[[paste0("df_threshold_", number)]]['High_Low_value'] <- high_low
+}
+empty_dict
+```
+
+
+```{r}
+empty_dict$df_threshold_3 %>% 
+  count(High_Low_value) %>% 
+  mutate(prop = n/sum(n))
+```
+```{r}
+empty_dict$
+```
+
+
+```{r}
+set.seed(123)
+empty_dict_df_threshold_3_split <- initial_split(empty_dict$df_threshold_14 %>% select(-Canonical.SMILES, -Ligand, -Permeability.coefficient, -name, -Accumulation_class), strata = as.integer(empty_dict$df_threshold_14$High_Low_value), prop = 3/4)
+
+empty_dict_df_threshold_3_train <- training(empty_dict_df_threshold_3_split)
+empty_dict_df_threshold_3_test  <- testing(empty_dict_df_threshold_3_split)
+
+nrow(empty_dict_df_threshold_3_train )
+nrow(empty_dict_df_threshold_3_train )/nrow(empty_dict$df_threshold_4)
+
+empty_dict_df_threshold_3_train$High_Low_value <- as.factor(empty_dict_df_threshold_3_train$High_Low_value)
+empty_dict_df_threshold_3_test$High_Low_value <- as.factor(empty_dict_df_threshold_3_test$High_Low_value)
+```
+
+
+```{r}
+rf_mod <- 
+  rand_forest(trees = 1000) %>% 
+  set_engine("ranger") %>%   # engine - method of estimation the model will use
+  set_mode("classification")
+print(rf_mod)
+```
+
+```{r}
+# train model
+set.seed(234)
+rf_fit <- 
+  rf_mod %>% 
+  fit(High_Low_value ~ ., data = empty_dict_df_threshold_3_train)
+
+rf_fit
+```
+```{r}
+rf_testing_pred <- 
+  predict(rf_fit, empty_dict_df_threshold_3_test) %>% 
+  bind_cols(predict(rf_fit, empty_dict_df_threshold_3_test, type = "prob")) %>% 
+  bind_cols(empty_dict_df_threshold_3_test %>% select(High_Low_value))
+
+# Accuracy calculation
+rf_testing_pred %>%                   # test set predictions
+  accuracy(truth =High_Low_value, .pred_class)
+```
+```{r}
+rf_testing_pred %>%                   # test set predictions
+  bal_accuracy(truth =High_Low_value, .pred_class)
+
+```
+
+
+```{r}
+example <- confusionMatrix(data=rf_testing_pred$.pred_class, reference = empty_dict_df_threshold_3_test$High_Low_value)
+example
+```
+
+```{r}
+example
+```
+
+```{r}
+final_metrics <- read.csv("final_metrics.csv",sep = ";" )
+final_metrics
+```
+
+```{r}
+ggplot(final_metrics, aes(x=Threshold, y=Balanced.accuracy)) +
+  geom_point()+
+  geom_line() +
+  stat_smooth()+
+  xlab("Thresholds") + ylab("Balanced accuracy") +
+  ylim(0.4, 0.85)+
+  geom_label(
+    label="Threshold: 14", 
+    x=12.3,
+    y=0.786	,
+    label.padding = unit(0.55, "lines"), # Rectangle size around label
+    label.size = 0.35,
+    color = "black",
+    fill="#69b3a2"
+  )
+#geom_bar(stat='identity')+
+```
+
+
+
